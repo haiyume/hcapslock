@@ -1,0 +1,28 @@
+<!DOCTYPE html>  
+<html lang="zh-CN"> 
+<head> 
+<meta charset="utf-8"> 
+<title>检测键盘的大写字母是否被锁定</title> 
+</head> 
+<body> 
+
+<input type="text" />
+
+<span id="clook" style="display:none;">大写开</span>
+
+<script type="text/javascript" src="js/hcapslock.js"></script>
+<script type="text/javascript">
+	
+hcapslock(
+	function(e){
+		document.getElementById("clook").style.display = 'inline';
+	}, function(e){
+		document.getElementById("clook").style.display = 'none';
+	}
+);
+
+
+window.onbeforeunload = function(){alert(66)};
+</script>
+</body> 
+</html>   
